@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "07f46206-7c51-406d-86c6-f276818ab458",
+		"name": "Coderhouse_TaiboAgustin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Listar Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar 1 Producto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/products/627af843b435aeac85e48398?_id=627af843b435aeac85e48398",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"627af843b435aeac85e48398"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "627af843b435aeac85e48398"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Adidas Yeezy Boost 350 v2 Beluga\",\r\n    \"description\": \"One of Yeezy's most celebrated designs received a reflective makeover with the adidas Yeezy Boost 350 V2 Beluga Reflective. The adidas Yeezy Boost 350 V2 Beluga Reflective builds off of the original Beluga colorway by adding reflective qualities and speckled orange accents to its Primeknit upper. Signature details like a Boost sole and orange side stripe complete the design. The adidas Yeezy Boost 350 V2 Beluga Reflective released in December of 2021 and retailed for $240.\",\r\n    \"code\": \"MKD008\",\r\n    \"image\": \"https://i0.wp.com/iceclub.com.ar/wp-content/uploads/2021/08/42-350beluga.jpg?fit=900%2C900&ssl=1\",\r\n    \"price\": 550,\r\n    \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"name\": \"Adidas Yeezy Boost 350 V2 Beluga\",\r\n        \"description\": \"One of Yeezy's most celebrated designs received a reflective makeover with the adidas Yeezy Boost 350 V2 Beluga Reflective. The adidas Yeezy Boost 350 V2 Beluga Reflective builds off of the original Beluga colorway by adding reflective qualities and speckled orange accents to its Primeknit upper. Signature details like a Boost sole and orange side stripe complete the design.The adidas Yeezy Boost 350 V2 Beluga Reflective released in December of 2021 and retailed for $240.\",\r\n        \"code\": \"ADYZY350\",\r\n        \"image\": \"https://m.media-amazon.com/images/I/51Ga4XD6E9L._AC_UX695_.jpg\",\r\n        \"price\": 550,\r\n        \"stock\": 10\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/627afcc5175b6769c957a604",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"627afcc5175b6769c957a604"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/627afcc5175b6769c957a604",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"627afcc5175b6769c957a604"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Nuevo Carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{           \"id_prod\": \"627af838b435aeac85e48397\",\r\n            \"units\": 1\r\n},\r\n{           \"id_prod\": \"627af7f6b435aeac85e48396\",\r\n            \"units\": 1\r\n},\r\n{           \"id_prod\": \"627af843b435aeac85e48398\",\r\n            \"units\": 2\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cart/627b011bdfad08ca30363ce0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"627b011bdfad08ca30363ce0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos en Carrito",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cart/627b02deb4cc246160520707/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"627b02deb4cc246160520707",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Producto a Carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_prod\":\"627af7f6b435aeac85e48396\",\r\n    \"units\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cart/627b02deb4cc246160520707/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"627b02deb4cc246160520707",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Producto en Carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cart/627b0d1cdcc32f7acdac6523/products/627af843b435aeac85e48398",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"627b0d1cdcc32f7acdac6523",
+								"products",
+								"627af843b435aeac85e48398"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
